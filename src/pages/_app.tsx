@@ -7,7 +7,7 @@ import "../styles/global.scss";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <NextAuthProvider session={pageProps.session}>
-      <Header />
+      <Header activedMenuTitle={pageProps.title} />
       <Component {...pageProps} />
     </NextAuthProvider>
   );
