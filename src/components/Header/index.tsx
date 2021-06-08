@@ -24,7 +24,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
   title,
   active,
 }: MenuItemProps) => (
-  <a href={link} className={active && styles.active}>
+  <a href={link} className={active ? styles.active : ""}>
     {title}
   </a>
 );
@@ -43,6 +43,7 @@ export function Header({ activedMenuTitle }: HeaderProps) {
         <nav>
           {menuOptions.map(({ link, title }) => (
             <MenuItem
+              key={title}
               link={link}
               title={title}
               active={title === activedMenuTitle}

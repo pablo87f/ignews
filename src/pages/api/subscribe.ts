@@ -33,6 +33,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           data: { stripe_customer_id: stripeCustomer.id },
         })
       );
+
       customerId = stripeCustomer.id;
     }
 
